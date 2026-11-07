@@ -14,7 +14,7 @@
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
 <style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Pájaro Carpintero Perú · Ventas</title>
+<title>Carpintero Andino Perú · Ventas</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%20%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23D9B48A'/%3E%20%3Crect%20x='4'%20y='4'%20width='56'%20height='56'%20rx='11'%20fill='none'%20stroke='%23B5322A'%20stroke-width='1.5'%20stroke-dasharray='3%202.5'/%3E%20%3Crect%20x='12'%20y='8'%20width='9'%20height='48'%20rx='3'%20fill='%236B4423'/%3E%20%3Cpath%20d='M15%2020h4M14%2033h5M15%2045h4'%20stroke='%234A2E17'%20stroke-width='1.4'%20stroke-linecap='round'/%3E%20%3Cpath%20d='M24%2042%20L20%2058%20L29%2046%20Z'%20fill='%232B1A0E'/%3E%20%3Cpath%20d='M22%2044%20C20%2034%2024%2024%2033%2022%20C40%2021%2044%2027%2042%2034%20C40%2042%2032%2049%2022%2044%20Z'%20fill='%232B1A0E'/%3E%20%3Cpath%20d='M27%2034%20l9%20-2%20M26%2038.5%20l9%20-2%20M27%2043%20l7%20-1.6'%20stroke='%23F4EBDD'%20stroke-width='2'%20stroke-linecap='round'/%3E%20%3Ccircle%20cx='35'%20cy='19.5'%20r='8.5'%20fill='%232B1A0E'/%3E%20%3Cpath%20d='M28%2015%20C28%208%2036%206%2041%2011%20C38%2011%2035%2012%2033%2015%20Z'%20fill='%23C8372D'/%3E%20%3Cpath%20d='M30%2022.5%20C33%2025%2037%2025%2039%2023'%20stroke='%23F4EBDD'%20stroke-width='1.8'%20fill='none'%20stroke-linecap='round'/%3E%20%3Cpath%20d='M42%2017.5%20L56%2020%20L42%2022.5%20Z'%20fill='%238C7A66'/%3E%20%3Ccircle%20cx='37.5'%20cy='18'%20r='2.1'%20fill='%23F4EBDD'/%3E%20%3Ccircle%20cx='38'%20cy='18'%20r='1'%20fill='%232B1A0E'/%3E%20%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
@@ -69,7 +69,7 @@ button, input, select, textarea { font: inherit; color: inherit }
 .layers { position: sticky; top: 0; height: 100vh; background: var(--sheet); border-right: 1px solid var(--rule); display: flex; flex-direction: column; padding: calc(20px + env(safe-area-inset-top,0px)) 14px 18px max(14px, env(safe-area-inset-left,0px)); gap: 22px }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); padding: 0 6px }
 .brand-mark { width: 36px; height: 36px; flex: none; display: inline-block; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E %3Crect width='64' height='64' rx='14' fill='%23D9B48A'/%3E %3Crect x='4' y='4' width='56' height='56' rx='11' fill='none' stroke='%23B5322A' stroke-width='1.5' stroke-dasharray='3 2.5'/%3E %3Crect x='12' y='8' width='9' height='48' rx='3' fill='%236B4423'/%3E %3Cpath d='M15 20h4M14 33h5M15 45h4' stroke='%234A2E17' stroke-width='1.4' stroke-linecap='round'/%3E %3Cpath d='M24 42 L20 58 L29 46 Z' fill='%232B1A0E'/%3E %3Cpath d='M22 44 C20 34 24 24 33 22 C40 21 44 27 42 34 C40 42 32 49 22 44 Z' fill='%232B1A0E'/%3E %3Cpath d='M27 34 l9 -2 M26 38.5 l9 -2 M27 43 l7 -1.6' stroke='%23F4EBDD' stroke-width='2' stroke-linecap='round'/%3E %3Ccircle cx='35' cy='19.5' r='8.5' fill='%232B1A0E'/%3E %3Cpath d='M28 15 C28 8 36 6 41 11 C38 11 35 12 33 15 Z' fill='%23C8372D'/%3E %3Cpath d='M30 22.5 C33 25 37 25 39 23' stroke='%23F4EBDD' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E %3Cpath d='M42 17.5 L56 20 L42 22.5 Z' fill='%238C7A66'/%3E %3Ccircle cx='37.5' cy='18' r='2.1' fill='%23F4EBDD'/%3E %3Ccircle cx='38' cy='18' r='1' fill='%232B1A0E'/%3E %3C/svg%3E") center/contain no-repeat }
-.brand b { font-family: var(--f-display); font-size: 1.05rem; font-weight: 800; letter-spacing: -.02em; line-height: 1.1 }
+.brand b { font-family: var(--f-display); font-size: .95rem; white-space: nowrap; font-weight: 800; letter-spacing: -.02em; line-height: 1.1 }
 .brand b small { display: block; font-family: var(--f-body); font-size: .72rem; font-weight: 600; letter-spacing: .02em; color: var(--ink-3) }
 .layer-h { font-size: .8rem; color: var(--ink-3); padding: 0 8px 6px; display: flex; justify-content: space-between }
 .nav { display: grid; gap: 2px }
@@ -459,7 +459,7 @@ textarea.quote:focus { outline: none; border-color: var(--engrave); box-shadow: 
 
 <div class="app">
   <aside class="layers" aria-label="Navegación">
-    <a class="brand" href="#inicio" aria-label="Pájaro Carpintero Perú, inicio"><span class="brand-mark" aria-hidden="true"></span><b>Pájaro Carpintero<small>Perú</small></b></a>
+    <a class="brand" href="#inicio" aria-label="Carpintero Andino Perú, inicio"><span class="brand-mark" aria-hidden="true"></span><b>Carpintero Andino<small>Perú</small></b></a>
     <div class="who" id="who" hidden><span class="av" id="whoAv"></span><div style="flex:1;min-width:0"><b id="whoName"></b><span id="whoRole"></span></div><button class="x" type="button" id="logout" title="Cerrar sesión" aria-label="Cerrar sesión"><svg class="ico"><use href="#i-out"/></svg></button></div>
     <div>
       <div class="layer-h"><span>Capas</span><span>Kit de ventas</span></div>
@@ -543,7 +543,7 @@ textarea.quote:focus { outline: none; border-color: var(--engrave); box-shadow: 
       </div>
     </aside>
   </div>
-  <div class="sheet" id="histBox"><div class="sec-h"><div><h2 id="histTitle">Mis cotizaciones</h2><p class="small" id="histSub">Solo tú las ves, y quien administra Pájaro Carpintero. "Usar" carga los datos en la calculadora; "Pedido" la convierte en pedido.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><select class="inp" id="qFilter" hidden aria-label="Filtrar por persona" style="width:auto"></select><button class="btn sm" type="button" data-export><svg class="ico"><use href="#i-down"/></svg><span class="exl">Descargar mis datos (Excel)</span></button></div></div><div id="hist"><p class="small">Cargando el historial…</p></div></div>
+  <div class="sheet" id="histBox"><div class="sec-h"><div><h2 id="histTitle">Mis cotizaciones</h2><p class="small" id="histSub">Solo tú las ves, y quien administra Carpintero Andino. "Usar" carga los datos en la calculadora; "Pedido" la convierte en pedido.</p></div><div style="display:flex;gap:8px;flex-wrap:wrap"><select class="inp" id="qFilter" hidden aria-label="Filtrar por persona" style="width:auto"></select><button class="btn sm" type="button" data-export><svg class="ico"><use href="#i-down"/></svg><span class="exl">Descargar mis datos (Excel)</span></button></div></div><div id="hist"><p class="small">Cargando el historial…</p></div></div>
 </section>
 
 <!-- ═══ 02 CALENDARIO ═══ -->
@@ -578,7 +578,7 @@ textarea.quote:focus { outline: none; border-color: var(--engrave); box-shadow: 
     <div class="week">
       <div><span class="dn">Día 1</span><span class="dname">Producto</span><p>Foto o video de calidad de lo que vendemos.</p><p class="ex">Reel girando el portarretrato LOVE terminado.</p></div>
       <div><span class="dn">Día 2</span><span class="dname">Proceso</span><p>El detrás de escena de cómo se hace.</p><p class="ex">El láser cortando el corazón multicapa en cámara rápida.</p></div>
-      <div><span class="dn">Día 3</span><span class="dname">Emoción</span><p>Historia, motivación o impacto en el cliente.</p><p class="ex">Por qué empezamos Pájaro Carpintero, o la historia de un regalo.</p></div>
+      <div><span class="dn">Día 3</span><span class="dname">Emoción</span><p>Historia, motivación o impacto en el cliente.</p><p class="ex">Por qué empezamos Carpintero Andino, o la historia de un regalo.</p></div>
       <div><span class="dn">Día 4</span><span class="dname">Prueba social</span><p>Testimonios, reseñas y fotos de clientes.</p><p class="ex">El mensaje de una pareja que recibió su regalo.</p></div>
       <div><span class="dn">Día 5</span><span class="dname">Urgencia</span><p>Un límite claro de cupos o de fecha.</p><p class="ex">"Quedan 5 cupos para entregar antes de Navidad".</p></div>
     </div></div>
@@ -592,7 +592,7 @@ textarea.quote:focus { outline: none; border-color: var(--engrave); box-shadow: 
 <section class="view" id="v-pedidos" hidden aria-labelledby="h-ped">
   <div class="vhead"><span class="tag"><span class="sw" style="--c:var(--L5)"></span>Capa 05 · Pedidos</span>
     <h1 id="h-ped">Pedidos en producción</h1>
-    <p id="pedSub">Cada pedido avanza del adelanto a la entrega. Tus pedidos solo los ves tú y quien administra Pájaro Carpintero.</p></div>
+    <p id="pedSub">Cada pedido avanza del adelanto a la entrega. Tus pedidos solo los ves tú y quien administra Carpintero Andino.</p></div>
   <div class="kpis"><div><b id="kAct">0</b><span>pedidos activos</span></div><div><b id="kWeek">0</b><span>se entregan en los próximos 7 días</span></div><div><b id="kDue">S/ 0.00</b><span>por cobrar (total menos adelanto)</span></div><div><b id="kGain">S/ 0.00</b><span>ganancia estimada de los pedidos activos</span></div></div>
   <div class="ptools"><button class="btn primary" type="button" data-new-order>Nuevo pedido</button><div style="display:flex;gap:8px;flex-wrap:wrap"><select class="inp" id="oFilter" hidden aria-label="Ver pedidos de" style="width:auto"></select><button class="btn" type="button" data-export><svg class="ico"><use href="#i-down"/></svg><span class="exl">Descargar mis datos (Excel)</span></button></div></div>
   <div class="board" id="board"></div>
@@ -653,9 +653,10 @@ textarea.quote:focus { outline: none; border-color: var(--engrave); box-shadow: 
 
 <div class="scrim" id="cfgModal" hidden>
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="cfgTitle">
-    <div class="modal-h"><div style="flex:1;min-width:0"><h2 id="cfgTitle">Costos del taller</h2><p class="small">Se guardan en este navegador y se usan en todas las cotizaciones.</p></div><button class="x" type="button" data-close-cfg aria-label="Cerrar"><svg class="ico"><use href="#i-x"/></svg></button></div>
+    <div class="modal-h"><div style="flex:1;min-width:0"><h2 id="cfgTitle">Costos del taller</h2><p class="small">Se usan en todas las cotizaciones del equipo.</p></div><button class="x" type="button" data-close-cfg aria-label="Cerrar"><svg class="ico"><use href="#i-x"/></svg></button></div>
     <div class="modal-b">
       <p class="lockmsg" id="cfgLock" hidden>Solo quien administra la página puede cambiar estos costos. Tú los ves para entender el precio.</p>
+      <div><h3 style="margin-bottom:4px">Tu negocio</h3><p class="small" style="margin-bottom:10px">Aparece en tus cotizaciones. Cada persona del equipo pone el suyo; si lo dejas vacío se usa “Carpintero Andino Perú”.</p><div class="field"><label for="cfg_negocio">Nombre de tu negocio</label><input id="cfg_negocio" maxlength="60" autocomplete="organization"><span class="small" id="negSync" aria-live="polite"></span></div></div>
       <div><h3 style="margin-bottom:12px">Tarifas</h3><div class="form" id="cfgFields"></div></div>
       <div><h3 style="margin-bottom:4px">Precios de insumos</h3><p class="small" style="margin-bottom:10px">En soles, por unidad de medida.</p><div class="tbl-wrap"><table class="tbl"><thead><tr><th>Insumo</th><th>Unidad</th><th class="r">Costo S/</th></tr></thead><tbody id="tIns"></tbody></table></div></div>
     </div>
@@ -703,7 +704,7 @@ textarea.quote:focus { outline: none; border-color: var(--engrave); box-shadow: 
   </div>
 </div>
 <div class="blocked" id="gate" role="dialog" aria-modal="true" aria-labelledby="gT"><div class="sheet" style="padding:34px 30px">
-  <span class="brand-mark" style="width:64px;height:64px" aria-hidden="true"></span><h2 id="gT">Pájaro Carpintero Perú</h2>
+  <span class="brand-mark" style="width:64px;height:64px" aria-hidden="true"></span><h2 id="gT">Carpintero Andino Perú</h2>
   <p class="muted" id="gMsg">Herramientas de ventas del equipo. Entra con tu cuenta de Google.</p>
   <div id="gBtn" style="min-height:44px;display:grid;place-items:center"></div>
   <button class="btn quiet sm" type="button" id="gOther" hidden>Usar otra cuenta</button>
@@ -853,6 +854,7 @@ function initFrases(){
 }
 
 /* Calculator */
+const NEGOCIO0 = 'Carpintero Andino Perú';
 const CFG0 = {disenoH:20, maquinaH:15, manoH:10, fijoPedido:5, merma:15, comVar:0, overhead:10, redondeo:1, descMax:15};
 const CFG_LBL = [['maquinaH','Máquina láser por hora','S/'],['manoH','Mano de obra por hora','S/'],['disenoH','Diseño por hora','S/'],['fijoPedido','Gasto fijo por pedido','S/'],['merma','Merma de material','%'],['overhead','Imprevistos sobre el costo','%'],['comVar','Comisión de cobro','%'],['descMax','Descuento máximo en ofertas','%'],['redondeo','Redondear precio a','S/']];
 const INS0 = [['MDF 3 mm','m²',9],['MDF 5,5 mm','m²',14],['Acrílico 3 mm','m²',60],['Cola blanca','ml',0.03],['Barniz / laca','ml',0.08],['Pintura acrílica','ml',0.1],['Imán flexible','unidad',0.5],['Caja kraft pequeña','unidad',2.5],['Bolsa celofán','unidad',0.3],['Etiqueta / sticker','unidad',0.2],['Mecanismo de reloj','unidad',8],['Luz LED','unidad',4]];
@@ -862,7 +864,7 @@ let cfg = Object.assign({}, CFG0, store.get('cfg2', {}));
 let ins = store.get('ins2', null) || INS0.map(r => r.slice());
 let margen = store.get('margen', 45);
 let quoteEdited = false, lastQuote = '', TIPO = 'laser';
-let uid = null, myName = '', canCfg = false, cfgTimer, cfgPending = false;
+let uid = null, myName = '', canCfg = false, cfgTimer, negTimer, cfgPending = false;
 const setSync = t => { const e = $('#cfgSync'); if (e) e.textContent = t };
 const save = () => { store.set('cfg2', cfg); store.set('ins2', ins);
   if (canCfg && window.__api) { clearTimeout(cfgTimer); setSync('Guardando en tu hoja…');
@@ -884,9 +886,15 @@ function compute(){
   const ohShare = costo - sub;
   return {q, area, material, extras, tiempo: tiempo + fijo + ohShare, costo, minimo, precio, gan, oferta};
 }
+let myNeg = store.get('negocio', '');
+const negocio = () => (typeof myNeg === 'string' && myNeg.trim()) ? myNeg.trim() : NEGOCIO0;
 function renderCfg(){
+  $('#cfg_negocio').value = myNeg.trim() ? myNeg : ''; $('#cfg_negocio').placeholder = NEGOCIO0;
   $('#cfgFields').innerHTML = CFG_LBL.map(([k,l,u]) => `<div class="field"><label for="cfg_${k}">${l}</label><div class="unit"><input type="number" min="0" step="any" id="cfg_${k}" value="${cfg[k]}"${canCfg ? '' : ' disabled'}><span>${u}</span></div></div>`).join('');
   CFG_LBL.forEach(([k]) => $('#cfg_'+k).addEventListener('input', e => { cfg[k] = nv(e.target.value); save(); update() }));
+  $('#cfg_negocio').oninput = e => { myNeg = e.target.value.slice(0, 60); store.set('negocio', myNeg); update();
+    clearTimeout(negTimer); $('#negSync').textContent = 'Guardando…';
+    negTimer = setTimeout(() => window.__api && window.__api('guardarNegocio', {negocio: negocio()}).then(() => { $('#negSync').textContent = 'Guardado en tu cuenta.' }).catch(err => { $('#negSync').textContent = err && err.code === 'accion_desconocida' ? 'Falta actualizar el servidor en Apps Script.' : 'No se pudo guardar. Revisa tu conexión.' }), 800) };
   $('#tIns').innerHTML = ins.map((r,i) => `<tr><td>${esc(r[0])}</td><td class="small">${esc(r[1])}</td><td class="r"><input type="number" min="0" step="any" id="in_${i}" value="${r[2]}" aria-label="Costo de ${esc(r[0])}"${canCfg ? '' : ' disabled'}></td></tr>`).join('');
   ins.forEach((r,i) => $('#in_'+i).addEventListener('input', e => { r[2] = nv(e.target.value); save(); renderExtras(); update() }));
 }
@@ -909,7 +917,7 @@ function update(){
   $('#floorTxt').innerHTML = ok ? `No vender por debajo de <b>${sol(r.minimo)}</b>: ahí no se gana nada. En una oferta de −${cfg.descMax} % quedaría en <b>${sol(r.oferta)}</b>.` : 'Revisa la comisión de cobro en Costos del taller: es demasiado alta.';
   $('#toolPrice').textContent = `Ejemplo actual: ${sol(r.precio)} por unidad`;
   const f = new Date().toLocaleDateString('es-PE', {day:'numeric', month:'long', year:'numeric'});
-  lastQuote = `🪵 *Cotización Pájaro Carpintero Perú*\n\n🎁 Producto: ${$('#pNombre').value}\n📅 Fecha: ${f}\n📦 Cantidad: ${r.q} unidades\n💰 Precio por unidad: ${sol(r.precio)}\n🧾 Total: ${sol(r.precio*r.q)}\n⏳ Validez: 7 días${myName ? '\n👤 Te atiende: ' + myName : ''}\n\n📌 Condiciones:\n✅ El adelanto confirma el pedido y reserva el turno de producción.\n✏️ Cambios de diseño, tamaño, material o acabado pueden modificar el precio.\n🚚 El plazo de entrega depende del material disponible y la agenda de producción.\n\n¡Gracias por elegir Pájaro Carpintero Perú! 🤎`;
+  lastQuote = `📋 *Cotización ${negocio()}*\n\n🎁 Producto: ${$('#pNombre').value}\n📅 Fecha: ${f}\n📦 Cantidad: ${r.q} unidades\n💰 Precio por unidad: ${sol(r.precio)}\n💵 Total: ${sol(r.precio*r.q)}\n⏳ Validez: 7 días${myName ? '\n👤 Te atiende: ' + myName : ''}\n\n📌 Condiciones:\n✅ El adelanto confirma el pedido y reserva el turno de producción.\n📝 Cambios de diseño, tamaño, material o acabado pueden modificar el precio.\n🚚 El plazo de entrega depende del material disponible y la agenda de producción.\n\n¡Gracias por elegir ${negocio()}! 😊`;
   if (!quoteEdited) $('#quote').value = lastQuote;
 }
 function setTipo(t){ TIPO = t === 'otro' ? 'otro' : 'laser'; store.set('tipo', TIPO);
@@ -989,7 +997,7 @@ const GMSG = {
   sesion_invalida: ['No se pudo confirmar tu cuenta. Vuelve a entrar con Google.', ''],
   sin_sesion: ['Entra con tu cuenta de Google.', ''],
   correo_no_verificado: ['Tu cuenta de Google no tiene el correo verificado.', ''],
-  sin_acceso: ['Tu cuenta no está en el equipo de Pájaro Carpintero Perú.', 'Pide al administrador que agregue este correo: '],
+  sin_acceso: ['Tu cuenta no está en el equipo de Carpintero Andino Perú.', 'Pide al administrador que agregue este correo: '],
   pausado: ['Tu acceso está pausado.', 'Habla con el administrador para reactivarlo. Tus datos siguen guardados. Cuenta: '],
   config: ['Falta configurar la conexión con Google.', 'Completa API_URL y CLIENT_ID al inicio de index.html (paso 4 de la guía).'],
   red: ['No se pudo conectar con el servidor.', 'Revisa tu internet y vuelve a intentar.']
@@ -1011,8 +1019,8 @@ $('#gOther').addEventListener('click', () => { try { google.accounts.id.disableA
 $('#logout').addEventListener('click', () => { try { google.accounts.id.disableAutoSelect() } catch(e){} TOKEN = null; try { sessionStorage.removeItem('ml_tok') } catch(e){} $('#who').hidden = true; gate('login') });
 
 function applyData(d){
-  if (d.yo) { uid = d.yo.email; myName = d.yo.nombre || ''; isAdmin = !!d.yo.admin; isOwner = !!d.yo.dueno; canCfg = isAdmin;
-    const first = myName.split(' ')[0] || uid.split('@')[0]; $('#whoName').textContent = 'Hola, ' + first; $('#whoRole').textContent = isAdmin ? 'Administrador' : 'Equipo Pájaro Carpintero';
+  if (d.yo) { if (typeof d.yo.negocio === 'string' && document.activeElement !== $('#cfg_negocio')) { myNeg = d.yo.negocio; store.set('negocio', myNeg); if (!$('#cfgModal').hidden) $('#cfg_negocio').value = negocio() } uid = d.yo.email; myName = d.yo.nombre || ''; isAdmin = !!d.yo.admin; isOwner = !!d.yo.dueno; canCfg = isAdmin;
+    const first = myName.split(' ')[0] || uid.split('@')[0]; $('#whoName').textContent = 'Hola, ' + first; $('#whoRole').textContent = isAdmin ? 'Administrador' : 'Equipo Carpintero Andino';
     const av = $('#whoAv'); if (d.yo.foto) { av.style.backgroundImage = `url("${String(d.yo.foto).replace(/["()]/g, '')}")`; av.textContent = '' } else av.textContent = first.charAt(0).toUpperCase(); $('#who').hidden = false;
     $$('[data-admin]').forEach(x => x.hidden = !isAdmin); $('#cfgLock').hidden = canCfg; $('#resetCfg').hidden = !canCfg; setSync(canCfg ? 'Los cambios se guardan en tu hoja de Google.' : '');
     $$('.exl').forEach(x => x.textContent = isAdmin ? 'Descargar datos del equipo (Excel)' : 'Descargar mis datos (Excel)');
@@ -1117,7 +1125,7 @@ function exportar(){
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(o.length ? o : [{'Pedidos': 'Sin pedidos'}]), 'Pedidos');
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(q.length ? q : [{'Cotizaciones': 'Sin cotizaciones'}]), 'Cotizaciones');
-  XLSX.writeFile(wb, `PajaroCarpintero_${isAdmin ? 'equipo' : 'mis-datos'}_${new Date().toISOString().slice(0,10)}.xlsx`);
+  XLSX.writeFile(wb, `CarpinteroAndino_${isAdmin ? 'equipo' : 'mis-datos'}_${new Date().toISOString().slice(0,10)}.xlsx`);
   toast('Excel descargado');
 }
 $$('[data-export]').forEach(b => b.addEventListener('click', exportar));
